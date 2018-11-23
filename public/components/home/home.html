@@ -1,0 +1,20 @@
+
+<form ng-submit="$ctrl.postData($ctrl.newStudent);">
+    
+    <input type="text" placeholder="Product" ng-model="$ctrl.newItem.product">
+    <input type="text" placeholder="Price" ng-model="$ctrl.newItem.price">
+    <input type="text" placeholder="Quantity" ng-model="$ctrl.newItem.quantity">
+    <button>Add New Item</button>
+  </form>
+  
+
+  <section ng-repeat="item in $ctrl.items">
+    
+    <input class="edit__input" type="text" ng-blur="$ctrl.updateData(item);" ng-model="item.product">
+    
+    <input class="edit__input" type="number" ng-blur="$ctrl.updateData(item);" ng-model="student.price">
+    
+    <input class="edit__input" type="number" ng-blur="$ctrl.updateData(item);" ng-model="student.quantity">
+    
+    <button ng-click="$ctrl.deleteData(student.id);">X</button>
+  </section>
