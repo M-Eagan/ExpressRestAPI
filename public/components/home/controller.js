@@ -2,6 +2,10 @@
 
 angular
   .module("App")
+  .config(['$qProvider', function ($qProvider) 
+{
+   $qProvider.errorOnUnhandledRejections(false); 
+}])
   .controller("HomeController", function(HomeService) {
     const $ctrl = this;
   
@@ -26,4 +30,6 @@ angular
     $ctrl.postData = (newItem) => {
       HomeService.postData(newItem).then(changes);
     };
+    
+    
   });

@@ -10,7 +10,7 @@ const items = require('./routes');
 
 app.use(express.json());
 app.use(express.static("./public"));
-app.use('/i', items);
+app.use('/', items);
 
 
 app.listen(port, () => console.log(`Server up and running on localhost:${port}`));

@@ -2,7 +2,7 @@
 
 const home = {
   
-  templateUrl: "home/home.html",
+  templateUrl: "components/home/home.html",
   
   controller: "HomeController"
 };
