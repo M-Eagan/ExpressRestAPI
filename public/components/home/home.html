@@ -1,5 +1,5 @@
 
-<form ng-submit="$ctrl.postData($ctrl.newStudent);">
+<form ng-submit="$ctrl.postData($ctrl.newItem);">
     
     <input type="text" placeholder="Product" ng-model="$ctrl.newItem.product">
     <input type="text" placeholder="Price" ng-model="$ctrl.newItem.price">
@@ -12,9 +12,9 @@
     
     <input class="edit__input" type="text" ng-blur="$ctrl.updateData(item);" ng-model="item.product">
     
-    <input class="edit__input" type="number" ng-blur="$ctrl.updateData(item);" ng-model="student.price">
+    <input class="edit__input" type="number" ng-blur="$ctrl.updateData(item);" ng-model="item.price">
     
-    <input class="edit__input" type="number" ng-blur="$ctrl.updateData(item);" ng-model="student.quantity">
+    <input class="edit__input" type="number" ng-blur="$ctrl.updateData(item);" ng-model="item.quantity">
     
-    <button ng-click="$ctrl.deleteData(student.id);">X</button>
+    <button ng-click="$ctrl.deleteData(item.id);">X</button>
   </section>
